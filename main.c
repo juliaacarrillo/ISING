@@ -1,4 +1,7 @@
 #include "head.h"
-
-random_config(s); 
-saveConfiguration(s); 
+int main()
+{
+    random_config(s); 
+    saveConfiguration(s); 
+    return 0;
+}
