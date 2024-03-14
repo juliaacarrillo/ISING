@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int L;
+#define L 10
+
 char s[L*L];
