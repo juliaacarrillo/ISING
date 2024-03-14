@@ -26,3 +26,5 @@ double energy (char *s, int *xp, int *yp){
     return energia;
 
 }
+
+
