@@ -68,4 +68,5 @@ void saveConfiguration(char *s){
     for (i=0; i<L*L; i++){
         fprintf(Fconfig,"%d%c",s[i],(i+1)%L==0?'\n':' ');
     }
+    fclose(Fconfig);
 }
