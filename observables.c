@@ -9,7 +9,7 @@ double magnetization (char *s){
     return sum/((double)L*L);
 }
 
-double energy (){
+double energy (char *s){
     int n;
     double energia;
     energia=0;
