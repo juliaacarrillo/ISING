@@ -9,4 +9,20 @@ double magnetizacion (char *s){
     return sum/((double)L*L);
 }
 
+double energy (){
+    int n;
+    double energia;
+    energia=0;
+    n=0;
+    int j;
+    int i;
+    for(j=0;j<L;j++){
+        for(i=0;i<L;i++){
+            energia+=s[n]*(s[n+xp[i]]+s[n+yp[i]]);7
+            n++;
+        }
+    }
 
+    return energia;
+
+}
