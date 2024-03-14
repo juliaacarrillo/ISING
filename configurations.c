@@ -17,8 +17,7 @@ void toro (int *xp, int *xn, int *yp, int *yn)
     xn[0]=-(L-1);
     yp[0]=-L*(L-1); 
 }
-
-void random_config (char s)
+void random_config (char *s)
 {
     int i; 
     for (i=0;i<L*L;i++)
@@ -28,32 +27,32 @@ void random_config (char s)
     }
 }
 
-void up_config (char s)
+void up_config (char *s)
 {
     int i;
-    for(i=0,i<L*L;i++)
+    for(i=0;i<L*L;i++)
     {
         s[i]=1;
     }
 }
 
-void down_config (char s)
+void down_config (char *s)
 {
     int i;
-    for(i=0,i<L*L;i++)
+    for(i=0;i<L*L;i++)
     {
         s[i]=-1;
     } 
 }
 
-void chess_config (char s) 
+void chess_config (char *s) 
 {
-    int i,j^,n; 
+    int i,j,n; 
     for (i=0;i<L;i++)
     {
         for (j=0;j<L;j++)
         {
-            s[i+n*j]=(-1)^(j+1); 
+            s[i+n*j]=pow(-1,j+i); 
         }
         n++; 
     }
