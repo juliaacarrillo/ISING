@@ -15,7 +15,7 @@ void toro (int *xp, int *xn, int *yp, int *yn)
         yn[i]=-L;
     }
     xn[0]=-(L-1);
-    yp[0]=-L*(L-1); 
+    yn[0]=-L*(L-1); 
 }
 void random_config (char *s)
 {
