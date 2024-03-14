@@ -1,5 +1,5 @@
 #include "head.h"
-double magnetizacion (char *s){
+double magnetization (char *s){
     int i;
     double sum;
     sum=0;
