@@ -1,5 +1,5 @@
 #include "head.h"
-void toro (int *xp, int *xn, int *yp, int *yn)
+void toro (int *xp, int *xn, int *yp, int *ym)
 {
     int i; 
     for(i=0;i<L-1;i++)
@@ -12,10 +12,10 @@ void toro (int *xp, int *xn, int *yp, int *yn)
     for(i=1;i<L;i++)
     {
         xn[i]=-1;
-        yn[i]=-L;
+        ym[i]=-L;
     }
     xn[0]=-(L-1);
-    yn[0]=-L*(L-1); 
+    ym[0]=(int)L*(L-1); 
 }
 void random_config (char *s)
 {

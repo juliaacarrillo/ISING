@@ -5,11 +5,12 @@
 #define L 10
 #define V L*L 
 
-int xp[L],xn[L],yp[L],yn[L];
+int xp[L],xn[L],yp[L];
+int ym[L];
 char s[V];
 
 void random_config (char *s);
-void toro(int *xp, int *xn, int *yp, int *yn);
+void toro(int *xp, int *xn, int *yp, int *ym);
 void up_config (char *s);
 void down_config (char *s);
 double energy (char *s, int *xp, int *yp);
