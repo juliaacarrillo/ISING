@@ -1,5 +1,5 @@
 #include "head.h"
-void toro (int *xp, int *xn, int *yp, int *ym)
+void toro(int *xp, int *xn, int *yp, int *ym)
 {
     int i; 
     for(i=0;i<L-1;i++)
@@ -17,28 +17,25 @@ void toro (int *xp, int *xn, int *yp, int *ym)
     xn[0]=-(L-1);
     ym[0]=(int)L*(L-1); 
 }
-void random_config (char *s)
+void rand_config(int *s)
 {
     int i; 
-    for (i=0;i<L*L;i++)
+    for (i=0;i<V;i++)
     {
         if(fran()<0.5) s[i]=1;
         else s[i]=-1;
     }
 }
-
-
-
-void up_config (char *s)
+void up_config(int *s)
 {
     int i;
-    for(i=0;i<L*L;i++)
+    for(i=0;i<V;i++)
     {
         s[i]=1;
     }
 }
 
-void down_config (char *s)
+void down_config(int *s)
 {
     int i;
     for(i=0;i<L*L;i++)
@@ -47,7 +44,7 @@ void down_config (char *s)
     } 
 }
 
-void chess_config (char *s) 
+void chess_config(int *s) 
 {
     int i,j,n; 
     for (i=0;i<L;i++)
@@ -60,8 +57,7 @@ void chess_config (char *s)
     }
 }
 
-
-void saveConfiguration(char *s){
+void saveConfiguration(int *s){
     int i;
     FILE *Fconfig;
     Fconfig=fopen("config.dat","wt");
