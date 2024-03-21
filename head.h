@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include <time.h>
-#define fran() (rand()/((double)RAND_MAX+1))
+#define fran (rand()/((double)RAND_MAX+1))
 #define L 10
 #define V L*L 
 

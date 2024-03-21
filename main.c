@@ -7,6 +7,6 @@ int main()
     e=0.0;
     rand_config(s);
     //e=energy(s,xp,yp);
-    //printf("%d\n",e);
+    printf("hola mundo");
     return 0;
 }

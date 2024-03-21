@@ -22,7 +22,7 @@ void rand_config(int *s)
     int i; 
     for (i=0;i<V;i++)
     {
-        if(fran()<0.5) s[i]=1;
+        if(fran<0.5) s[i]=1;
         else s[i]=-1;
     }
 }
