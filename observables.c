@@ -47,7 +47,7 @@ return abs(m);
 /*función que calcula el valor esperado de la energía y la magnetización*/
 //void expected_e_m
 
- expected_e_m(int *s, Medias*medias){ //hacerlo con parametros para energia y magnetizacion
+void expected_e_m(int *s, Medias*medias){ //hacerlo con parametros para energia y magnetizacion
     for(i=0;i<V;i++){
         double e = energy(s,xp,yp);
         double m = absMagnetization(s);
