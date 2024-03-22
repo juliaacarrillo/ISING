@@ -1,5 +1,5 @@
 #include "head.h"
-double magnetization (char *s){
+double magnetization (int *s){
     int i;
     double sum;
     sum=0;
@@ -9,7 +9,7 @@ double magnetization (char *s){
     return sum/((double)L*L);
 }
 
-double energy (char *s, int *xp, int *yp){
+double energy (int *s, int *xp, int *yp){
     int n;
     double energia;
     energia=0;

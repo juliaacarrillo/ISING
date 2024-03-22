@@ -17,7 +17,7 @@ void toro (int *xp, int *xn, int *yp, int *yn)
     xn[0]=-(L-1);
     yn[0]=-L*(L-1); 
 }
-void random_config (char *s)
+void random_config (int *s)
 {
     int i; 
     for (i=0;i<L*L;i++)
@@ -29,7 +29,7 @@ void random_config (char *s)
 
 
 
-void up_config (char *s)
+void up_config (int *s)
 {
     int i;
     for(i=0;i<L*L;i++)
@@ -38,7 +38,7 @@ void up_config (char *s)
     }
 }
 
-void down_config (char *s)
+void down_config (int *s)
 {
     int i;
     for(i=0;i<L*L;i++)
@@ -47,7 +47,7 @@ void down_config (char *s)
     } 
 }
 
-void chess_config (char *s) 
+void chess_config (int *s) 
 {
     int i,j,n; 
     for (i=0;i<L;i++)
@@ -61,7 +61,7 @@ void chess_config (char *s)
 }
 
 
-void saveConfiguration(char *s){
+void saveConfiguration(int *s){
     int i;
     FILE *Fconfig;
     Fconfig=fopen("config.dat","wt");
@@ -69,4 +69,19 @@ void saveConfiguration(char *s){
         fprintf(Fconfig,"%d%c",s[i],(i+1)%L==0?'\n':' ');
     }
     fclose(Fconfig);
+}
+void sweep(int n,double x, double y){
+n=0;
+for(y=0;x<L;y++){
+    for(x=0;x<L;x++){
+        s_inicial=s[n];
+        s_final=-s[n];
+        Ind=s[n]*(s[n+xp[n]]+s[n+yp[n]]+s[n+xn[n]]+s[n+yn[n]])/2 + 2;
+       if(fran()<Prob[Ind]){
+        s[n]=-s[n];
+        n++;
+       }
+        
+    }
+}
 }
