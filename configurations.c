@@ -1,5 +1,5 @@
 #include "head.h"
-void toro (int *xp, int *xn, int *yp, int *yn)
+void toro(int *xp, int *xn, int *yp, int *ym)
 {
     int i; 
     for(i=0;i<L-1;i++)
@@ -12,42 +12,41 @@ void toro (int *xp, int *xn, int *yp, int *yn)
     for(i=1;i<L;i++)
     {
         xn[i]=-1;
-        yn[i]=-L;
+        ym[i]=-L;
     }
     xn[0]=-(L-1);
-    yn[0]=-L*(L-1); 
+    ym[0]=(int)L*(L-1); 
 }
-void random_config (int *s)
+
+void rand_config(int *s)
 {
     int i; 
-    for (i=0;i<L*L;i++)
+    for (i=0;i<V;i++)
     {
-        if(fran()<0.5) s[i]=1;
+        if(fran<0.5) s[i]=1;
         else s[i]=-1;
     }
 }
 
-
-
-void up_config (int *s)
+void up_config(int *s)
 {
     int i;
-    for(i=0;i<L*L;i++)
+    for(i=0;i<V;i++)
     {
         s[i]=1;
     }
 }
 
-void down_config (int *s)
+void down_config(int *s)
 {
     int i;
-    for(i=0;i<L*L;i++)
+    for(i=0;i<V;i++)
     {
         s[i]=-1;
     } 
 }
 
-void chess_config (int *s) 
+void chess_config(int *s) 
 {
     int i,j,n; 
     for (i=0;i<L;i++)
@@ -59,7 +58,6 @@ void chess_config (int *s)
         n++; 
     }
 }
-
 
 void saveConfiguration(int *s){
     int i;
@@ -74,8 +72,6 @@ void sweep(int n,double x, double y){
 n=0;
 for(y=0;x<L;y++){
     for(x=0;x<L;x++){
-        s_inicial=s[n];
-        s_final=-s[n];
         Ind=s[n]*(s[n+xp[n]]+s[n+yp[n]]+s[n+xn[n]]+s[n+yn[n]])/2 + 2;
        if(fran()<Prob[Ind]){
         s[n]=-s[n];
