@@ -1,5 +1,5 @@
 #include "head.h"
-void toro(int *xp, int *xn, int *yp, int *ym)
+void toro(int *xp, int *xn, int *yp, int *yn)
 {
     int i; 
     for(i=0;i<L-1;i++)
@@ -12,10 +12,10 @@ void toro(int *xp, int *xn, int *yp, int *ym)
     for(i=1;i<L;i++)
     {
         xn[i]=-1;
-        ym[i]=-L;
+        yn[i]=-L;
     }
     xn[0]=-(L-1);
-    ym[0]=(int)L*(L-1); 
+    yn[0]=(int)L*(L-1); 
 }
 
 void rand_config(int *s)
@@ -68,16 +68,16 @@ void saveConfiguration(int *s){
     }
     fclose(Fconfig);
 }
-void sweep(int n,double x, double y){
+/*void sweep(int n,double x, double y){
 n=0;
 for(y=0;x<L;y++){
     for(x=0;x<L;x++){
         Ind=s[n]*(s[n+xp[n]]+s[n+yp[n]]+s[n+xn[n]]+s[n+yn[n]])/2 + 2;
-       if(fran()<Prob[Ind]){
+       if(fran<Prob[Ind]){
         s[n]=-s[n];
         n++;
        }
         
     }
 }
-}
+}*/

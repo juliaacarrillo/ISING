@@ -2,11 +2,16 @@
 
 int main()
 {
-    int xp[L],yp[L],s[V];
-    double e,m; 
-    e=0.0;
-    rand_config(s);
-    //e=energy(s,xp,yp);
-    printf("hola mundo");
+    int xp[L],xn[L],yp[L],yn[L];
+    int s[V];
+    char s_inicial;
+    char s_final;
+    int E_i;
+    int E_f;
+    int n;
+    double beta;
+    printf("Hola mundo");
+    int Naceptados;
+    int Ind;
     return 0;
 }
