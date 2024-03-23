@@ -6,7 +6,6 @@
 #define L 10
 #define V L*L 
 
-//cómo meto el generador de tiempo???
 //configuracion.c functions
 void rand_config(int *s);
 void toro(int *xp, int *xn, int *yp, int *ym);
