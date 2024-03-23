@@ -17,6 +17,7 @@ void toro(int *xp, int *xn, int *yp, int *ym)
     xn[0]=-(L-1);
     ym[0]=(int)L*(L-1); 
 }
+
 void rand_config(int *s)
 {
     int i; 
@@ -26,6 +27,7 @@ void rand_config(int *s)
         else s[i]=-1;
     }
 }
+
 void up_config(int *s)
 {
     int i;
@@ -38,7 +40,7 @@ void up_config(int *s)
 void down_config(int *s)
 {
     int i;
-    for(i=0;i<L*L;i++)
+    for(i=0;i<V;i++)
     {
         s[i]=-1;
     } 
@@ -65,4 +67,17 @@ void saveConfiguration(int *s){
         fprintf(Fconfig,"%d%c",s[i],(i+1)%L==0?'\n':' ');
     }
     fclose(Fconfig);
+}
+void sweep(int n,double x, double y){
+n=0;
+for(y=0;x<L;y++){
+    for(x=0;x<L;x++){
+        Ind=s[n]*(s[n+xp[n]]+s[n+yp[n]]+s[n+xn[n]]+s[n+yn[n]])/2 + 2;
+       if(fran()<Prob[Ind]){
+        s[n]=-s[n];
+        n++;
+       }
+        
+    }
+}
 }
