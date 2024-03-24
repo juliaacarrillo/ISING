@@ -10,6 +10,7 @@
                 "main.c",
                 "configurations.c",
                 "observables.c",
+                "generador.c",
                 "-o",
                 "${workspaceFolder}\\ising.exe"
             ],
