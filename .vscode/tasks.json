@@ -11,6 +11,7 @@
                 "configurations.c",
                 "observables.c",
                 "generador.c",
+                "statistics.c",
                 "-o",
                 "${workspaceFolder}\\ising.exe"
             ],
