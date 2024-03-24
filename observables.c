@@ -6,7 +6,7 @@ double magnetization (int *s){
     for (i=0; i<V; i++){
         sum+=s[i];
     }
-    return sum/V;
+    return sum/((double) V);
 }
 
 double energy (int *s, int *xp, int *yp){
@@ -22,7 +22,7 @@ double energy (int *s, int *xp, int *yp){
             n++;
         }
     }
-    return (double)(-1.0/(2.0*V))*energia; //energía intensiva
+    return energia/(2.0*V); //energía intensiva
 }
 /*función que calcula la media y la varianza de una serie de datos*/
 //double med_var
