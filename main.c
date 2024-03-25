@@ -2,6 +2,7 @@
 
 int main()
 {
+    ini_ran(123456789);
     int xp[L],xn[L],yp[L],yn[L];
     int s[V];
     double e;
