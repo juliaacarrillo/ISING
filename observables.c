@@ -25,7 +25,7 @@ double energy (int *s, int *xp, int *yp){
     return energia/(2.0*V); //energía intensiva
 }
 
-//valor absoluto de m
+
 double absMagnetization(int *s){
 double m = magnetization(s);
 return abs(m);
